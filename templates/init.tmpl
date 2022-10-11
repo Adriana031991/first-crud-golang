@@ -1,0 +1,43 @@
+{{ define "init"}}
+{{template "header"}}
+
+        <a name="" id="" class="btn btn-primary" href="/create" role="button">Add Emploee</a>
+  <table class="table">
+
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>NOMBRE</th>
+                <th>CORREO</th>
+                <th>ACCIONES</th>
+            </tr>
+        </thead>
+        <tbody>
+        {{range.}}
+            <tr>
+                <td scope="row">{{.Id}}</td>
+                <td>{{.Name}}</td>
+                <td>{{.Email}}</td>
+                <td> 
+                <a name="" id="" class="btn btn-warning" href="/edit?id={{.Id}}" role="button">Editar</a>
+ 
+                | 
+                
+                <a name="" id="" class="btn btn-danger" href="/borrar?id={{.Id}}" role="button">Borrar</a>
+                
+                
+                </td>
+            </tr>
+            <tr>
+
+                <td scope="row"></td>
+                <td></td>
+                <td></td>
+            </tr>
+{{end}}
+        </tbody>
+      </table>
+          
+{{ template "footer" }}
+
+{{end}}

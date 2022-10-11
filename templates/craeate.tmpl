@@ -1,0 +1,38 @@
+{{define "create"}}
+
+{{template "header"}}
+
+<div class="card">
+    <div class="card-header">
+        New Emploeer
+    </div>
+
+    <div class="card-body">
+    <form method="post" action="insert">
+
+        <div class="form-group">
+        <label for="">Name: </label>
+        <input type="text" name="name" id="name" class="form-control" placeholder="" aria-describedby="helpId">
+        <small id="helpId" class="text-muted">write name</small>
+        </div>
+
+        <div class="form-group">
+        <label for="">email: </label>
+        <input type="email" name="email" id="email" class="form-control" placeholder="" aria-describedby="helpId">
+        <small id="helpId" class="text-muted">write email</small>
+        </div>
+
+
+
+        <button type="submit" class="btn btn-primary" >Create Emploee</button>
+    </form>
+
+
+    </div>
+
+
+</div>
+
+{{ template "footer" }}
+
+{{end}}
